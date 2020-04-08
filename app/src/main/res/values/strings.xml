@@ -1,0 +1,44 @@
+<resources>
+
+<!--    <string name="qn">Q1.</string>-->
+<!--    <string name="q"></string>-->
+<!--    <string name="q_op1"></string>-->
+<!--    <string name="q_op2"></string>-->
+<!--    <string name="q_op3"></string>-->
+<!--    <string name="q_op4"></string>-->
+<!--    -->
+    <string name="app_name">G.K QUIZ</string>
+    <string name="Heading">World GK Questions</string>
+
+
+    <string name="qn1">Q1.</string>
+    <string name="q1">What is the world\'s most common religion?</string>
+    <string name="q1_op1">Hinduism</string>
+    <string name="q1_op2">Christianity</string>
+    <string name="q1_op3">Buddhism</string>
+    <string name="q1_op4">Islam</string>
+
+    <string name="qn2">Q2.</string>
+    <string name="q2">Ball pen function on which one of the following principal?</string>
+    <string name="q2_op1">Boyle’s law</string>
+    <string name="q2_op2">Gravitational force</string>
+    <string name="q2_op3">Surface tension</string>
+    <string name="q2_op4">Viscosity</string>
+
+    <string name="qn3">Q3.</string>
+    <string name="q3">Who is the first person to reach Mount Everest?</string>
+    <string name="q3_op1"> Edmund Hillary</string>
+    <string name="q3_op2">Charles Hillary</string>
+    <string name="q3_op3">Rajesh Sharma</string>
+    <string name="q3_op4">Johan don</string>
+
+    <string name="qn4">Q4.</string>
+    <string name="q4"> Which is the first country to print book?</string>
+    <string name="q4_op1">China</string>
+    <string name="q4_op2">India</string>
+    <string name="q4_op3">USA</string>
+    <string name="q4_op4">UK</string>
+
+
+    <string name="submit">SUBMIT</string>
+</resources>
