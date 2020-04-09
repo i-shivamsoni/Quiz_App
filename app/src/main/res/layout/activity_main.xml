@@ -92,8 +92,6 @@
             android:layout_toEndOf="@id/rdb_q1_1"
             android:layout_toRightOf="@id/rdb_q1_1"
             android:text="@string/q1_op4" />
-
-
     </RelativeLayout>
 
         <RelativeLayout
