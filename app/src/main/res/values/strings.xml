@@ -10,7 +10,9 @@
     <string name="app_name">G.K QUIZ</string>
     <string name="Heading">World GK Questions</string>
 
+    <style name="ides">Background image</style>
 
+    <style name="imgdes">Background image</style>
     <string name="qn1">Q1.</string>
     <string name="q1">What is the world\'s most common religion?</string>
     <string name="q1_op1">Hinduism</string>
@@ -39,6 +41,6 @@
     <string name="q4_op3">USA</string>
     <string name="q4_op4">UK</string>
 
-
+    <string name="imgdes">Background image</string>
     <string name="submit">SUBMIT</string>
 </resources>
