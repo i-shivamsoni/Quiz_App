@@ -1,18 +1,16 @@
 <resources>
 
-<!--    <string name="qn">Q1.</string>-->
-<!--    <string name="q"></string>-->
-<!--    <string name="q_op1"></string>-->
-<!--    <string name="q_op2"></string>-->
-<!--    <string name="q_op3"></string>-->
-<!--    <string name="q_op4"></string>-->
-<!--    -->
+    <!--    <string name="qn">Q1.</string>-->
+    <!--    <string name="q"></string>-->
+    <!--    <string name="q_op1"></string>-->
+    <!--    <string name="q_op2"></string>-->
+    <!--    <string name="q_op3"></string>-->
+    <!--    <string name="q_op4"></string>-->
+    <!--    -->
     <string name="app_name">G.K QUIZ</string>
-    <string name="Heading">World GK Questions</string>
+    <string name="Heading">GK Quiz</string>
 
-    <style name="ides">Background image</style>
 
-    <style name="imgdes">Background image</style>
     <string name="qn1">Q1.</string>
     <string name="q1">What is the world\'s most common religion?</string>
     <string name="q1_op1">Hinduism</string>
@@ -34,13 +32,34 @@
     <string name="q3_op3">Rajesh Sharma</string>
     <string name="q3_op4">Johan don</string>
 
-    <string name="qn4">Q4.</string>
-    <string name="q4"> Which is the first country to print book?</string>
-    <string name="q4_op1">China</string>
-    <string name="q4_op2">India</string>
-    <string name="q4_op3">USA</string>
-    <string name="q4_op4">UK</string>
 
-    <string name="imgdes">Background image</string>
-    <string name="submit">SUBMIT</string>
+    <string name="qn5">Q5.</string>
+    <string name="q5"> Which country is not a permanent member of U.N permanent counsil?</string>
+    <string name="q5_op1">PRC</string>
+    <string name="q5_op2">India</string>
+    <string name="q5_op3">USA</string>
+    <string name="q5_op4">Italy</string>
+
+    <string name="qn4">Q4.</string>
+    <string name="q4"> Which of following the country is an Asian country ?</string>
+    <string name="q4_op1">Japan </string>
+    <string name="q4_op2">Russia</string>
+    <string name="q4_op3">Italy</string>
+    <string name="q4_op4">Australia </string>
+
+
+    <string name="Sub_Heading_schoice">Questions with single correct answer</string>
+    <string name="Sub_Heading_mchoice">Question with Multiple correct answers</string>
+    <string name="Text_User_Details">User Details</string>
+    <string name="Des_imgdes">Background image</string>
+    <string name="btn_submit">SUBMIT</string>
+    <string name="hint_name">Enter Name</string>
+    <string name="hint_age">Enter Age</string>
+    <string name="Text_Name">Name : </string>
+    <string name="Text_Age">Age : </string>
+    <string name="Text_Gender">Gender : </string>
+    <string name="Rd_Male">Male</string>
+    <string name="Rd_Female">Female</string>
+    <string name="Decline">Decline to state</string>
+    <string name="NoSelection">Nothing Selected</string>
 </resources>

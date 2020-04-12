@@ -7,7 +7,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:contentDescription="@string/imgdes"
+        android:contentDescription="@string/Des_imgdes"
         android:scaleType="centerCrop"
         android:src="@drawable/img2" />
 
@@ -27,14 +27,125 @@
                 android:id="@+id/tv_01_heading"
                 style="@style/WW_HW"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginRight="16dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
                 android:fontFamily="serif-monospace"
                 android:text="@string/Heading"
-                android:textSize="32sp"
+                android:textSize="50sp"
                 tools:targetApi="jelly_bean" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="@string/Text_User_Details"
+                android:textSize="20sp"
+                tools:targetApi="jelly_bean" />
+
+            <LinearLayout
+                style="@style/questions"
+                android:layout_width="match_parent"
+
+                android:orientation="vertical">
+
+                <LinearLayout
+                    style="@style/WM_HW"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        style="@style/WW_HW"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:text="@string/Text_Name"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/ET_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:autofillHints="@string/Text_Name"
+                        android:hint="@string/hint_name"
+                        android:inputType="text" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/WW_HW"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        style="@style/WW_HW"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:text="@string/Text_Gender"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radio_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radio_gender_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:text="@string/Rd_Male"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/radio_gender_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:text="@string/Rd_Female"
+                            android:textSize="20sp" />
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:text="@string/Text_Age"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/ET_age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginRight="30dp"
+                        android:autofillHints="@string/hint_age"
+                        android:hint="@string/hint_age"
+                        android:inputType="number" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="@string/Sub_Heading_schoice"
+                android:textSize="20sp"
+                tools:targetApi="jelly_bean" />
 
             <LinearLayout
                 style="@style/WW_HW"
@@ -62,13 +173,6 @@
                 <LinearLayout style="@style/WM_HW">
 
                     <RadioGroup style="@style/WM_HW">
-
-                        <!--                    <LinearLayout-->
-                        <!--                        style="@style/WM_HW"-->
-                        <!--                        android:layout_marginStart="80dp"-->
-                        <!--                        android:layout_marginLeft="80dp"-->
-                        <!--                        android:gravity="start">-->
-
                         <RadioButton
                             android:id="@+id/rdb_q1_1"
                             style="@style/answers"
@@ -78,13 +182,6 @@
                             android:id="@+id/rdb_q1_2"
                             style="@style/answers"
                             android:text="@string/q1_op2" />
-                        <!--                    </LinearLayout>-->
-
-                        <!--                    <LinearLayout-->
-                        <!--                        style="@style/WM_HW"-->
-                        <!--                        android:layout_marginStart="80dp"-->
-                        <!--                        android:layout_marginLeft="80dp"-->
-                        <!--                        android:gravity="start">-->
 
                         <RadioButton
                             android:id="@+id/rdb_q1_3"
@@ -95,7 +192,7 @@
                             android:id="@+id/rdb_q1_4"
                             style="@style/answers"
                             android:text="@string/q1_op4" />
-                        <!--                    </LinearLayout>-->
+
                     </RadioGroup>
                 </LinearLayout>
             </LinearLayout>
@@ -128,11 +225,6 @@
 
                     <RadioGroup style="@style/WM_HW">
 
-                        <!--                    <LinearLayout-->
-                        <!--                        style="@style/WM_HW"-->
-                        <!--                        android:layout_marginStart="80dp"-->
-                        <!--                        android:layout_marginLeft="80dp"-->
-                        <!--                        android:gravity="start">-->
 
                         <RadioButton
                             android:id="@+id/rdb_q2_1"
@@ -145,13 +237,6 @@
                             android:layout_marginStart="50dp"
                             android:layout_marginLeft="50dp"
                             android:text="@string/q2_op2" />
-                        <!--                    </LinearLayout>-->
-
-                        <!--                    <LinearLayout-->
-                        <!--                        style="@style/WM_HW"-->
-                        <!--                        android:layout_marginStart="80dp"-->
-                        <!--                        android:layout_marginLeft="80dp"-->
-                        <!--                        android:gravity="start">-->
 
                         <RadioButton
                             android:id="@+id/rdb_q2_3"
@@ -238,6 +323,19 @@
                 </LinearLayout>
             </LinearLayout>
 
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="@string/Sub_Heading_mchoice"
+                android:textSize="20sp"
+                tools:targetApi="jelly_bean" />
+
+
             <LinearLayout
                 style="@style/WW_HW"
                 android:layout_marginTop="10dp"
@@ -261,56 +359,127 @@
                         android:text="@string/q4" />
                 </LinearLayout>
 
-                <LinearLayout style="@style/WM_HW">
+                <LinearLayout
+                    style="@style/WM_HW"
+                    android:orientation="vertical">
 
-                    <RadioGroup style="@style/WM_HW">
 
-                        <!--                    <LinearLayout-->
-                        <!--                        style="@style/WM_HW"-->
-                        <!--                        android:layout_marginStart="80dp"-->
-                        <!--                        android:layout_marginLeft="80dp"-->
-                        <!--                        android:gravity="start">-->
+                    <LinearLayout
+                        style="@style/WM_HW"
+                        android:layout_marginTop="10dp"
+                        android:gravity="start">
 
-                        <RadioButton
-                            android:id="@+id/rdb_q4_1"
+                        <CheckBox
+                            android:id="@+id/cb_q4_1"
                             style="@style/answers"
                             android:text="@string/q4_op1" />
 
-                        <RadioButton
-                            android:id="@+id/rdb_q4_2"
+                        <CheckBox
+                            android:id="@+id/cb_q4_2"
                             style="@style/answers"
-                            android:layout_marginStart="50dp"
-                            android:layout_marginLeft="50dp"
                             android:text="@string/q4_op2" />
-                        <!--                    </LinearLayout>-->
+                    </LinearLayout>
 
-                        <!--                    <LinearLayout-->
-                        <!--                        style="@style/WM_HW"-->
-                        <!--                        android:layout_marginStart="80dp"-->
-                        <!--                        android:layout_marginLeft="80dp"-->
-                        <!--                        android:gravity="start">-->
+                    <LinearLayout
+                        style="@style/WM_HW"
+                        android:gravity="start">
 
-                        <RadioButton
-                            android:id="@+id/rdb_q4_3"
+                        <CheckBox
+                            android:id="@+id/cb_q4_3"
                             style="@style/answers"
                             android:text="@string/q4_op3" />
 
-                        <RadioButton
-                            android:id="@+id/rdb_q4_4"
+                        <CheckBox
+                            android:id="@+id/cb_q4_4"
+                            style="@style/answers"
+                            android:text="@string/q4_op4" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                style="@style/WW_HW"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout style="@style/WW_HW">
+
+                    <TextView
+                        android:id="@+id/tv_06_qn5"
+                        style="@style/questions"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:text="@string/qn5" />
+
+                    <TextView
+                        android:id="@+id/tv_06_q5"
+                        style="@style/questions"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:text="@string/q5" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/WM_HW"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        style="@style/WM_HW"
+                        android:layout_marginTop="10dp"
+                        android:gravity="start">
+
+                        <CheckBox
+                            android:id="@+id/cb_q5_1"
+                            style="@style/answers"
+                            android:text="@string/q5_op1" />
+
+                        <CheckBox
+                            android:id="@+id/cb_q5_2"
                             style="@style/answers"
                             android:layout_marginStart="50dp"
                             android:layout_marginLeft="50dp"
-                            android:text="@string/q4_op4" />
-                        <!--                    </LinearLayout>-->
-                    </RadioGroup>
+                            android:text="@string/q5_op2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/WM_HW"
+                        android:gravity="start">
+
+                        <CheckBox
+                            android:id="@+id/cb_q5_3"
+                            style="@style/answers"
+                            android:text="@string/q5_op3" />
+
+                        <CheckBox
+                            android:id="@+id/cb_q5_4"
+                            style="@style/answers"
+                            android:text="@string/q5_op4" />
+                    </LinearLayout>
+
+
                 </LinearLayout>
             </LinearLayout>
+
 
             <Button
                 style="@style/WW_HW"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
-                android:text="@string/submit" />
+                android:onClick="On_submit"
+                android:text="@string/btn_submit" />
+
+            <TextView
+                android:id="@+id/tv_8_final_results"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="20sp"
+                android:visibility="visible" />
 
         </LinearLayout>
 
