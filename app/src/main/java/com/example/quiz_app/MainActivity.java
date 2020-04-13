@@ -153,6 +153,14 @@ public class MainActivity extends AppCompatActivity {
             flag = false;
         }
 
+
+        if (Integer.parseInt(age) == 0) {
+            Toast msg = Toast.makeText(getApplicationContext(), getString(R.string.ageerror), Toast.LENGTH_LONG);
+            msg.show();
+            flag = false;
+        }
+
+
         return flag;
     }
 
