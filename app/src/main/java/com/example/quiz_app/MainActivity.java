@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         set_answers();
     }
 
-    final void set_answers() {
+    final void set_answers() { //sets the answers of the question for comparision
         Answers[0] = getString(R.string.q1_op1);
         Answers[1] = getString(R.string.q2_op3);
         Answers[2] = getString(R.string.q3_op2);
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    void check_for_rad() {
+    void check_for_rad() {  //for getting scores of questions with radio button
         int rg_id_1 = R.id.rg_no_1;
         int rg_id_2 = R.id.rg_no_2;
         int rg_id_3 = R.id.rg_no_3;
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    void check_for_cb() {
+    void check_for_cb() {  //for getting scores of questions with checkboxes
         //correct answers for q 4 are 1 & 2
         CheckBox Op_4q_1 = findViewById(R.id.cb_q4_1);
         CheckBox Op_4q_2 = findViewById(R.id.cb_q4_2);
@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    void details_Response() {
+    void details_Response() { //get the responses from text view and set it in strings
         EditText ET_name = findViewById(R.id.ET_name);
         EditText ET_age = findViewById(R.id.ET_age);
         radioGroup = findViewById(R.id.radio_gender);
@@ -139,54 +139,55 @@ public class MainActivity extends AppCompatActivity {
         gender = radio_selected.getText().toString();
     }
 
-    Boolean check_Details(Boolean flag) {
+    Boolean check_Details(Boolean flag) { //for validations on details
+
         EditText ET_name = findViewById(R.id.ET_name);
         EditText ET_age = findViewById(R.id.ET_age);
         radioGroup = findViewById(R.id.radio_gender);
         int selectedId = radioGroup.getCheckedRadioButtonId();
         String name = ET_name.getText().toString();
         String age = ET_age.getText().toString();
-        if ((TextUtils.isEmpty(age)) || ((selectedId == -1)) || (TextUtils.isEmpty(name))) {
+
+        if ((TextUtils.isEmpty(age)) || ((selectedId == -1)) || (TextUtils.isEmpty(name))) { //validation for empty fields
             Log.w("V", "no name ");
             Toast msg = Toast.makeText(getApplicationContext(), getString(R.string.Please_fill), Toast.LENGTH_LONG);
             msg.show();
             flag = false;
         }
 
-
-        if (Integer.parseInt(age) == 0) {
+        if (Integer.parseInt(age) == 0) { // validation for age
             Toast msg = Toast.makeText(getApplicationContext(), getString(R.string.ageerror), Toast.LENGTH_LONG);
             msg.show();
             flag = false;
         }
 
-
         return flag;
     }
 
-    void set_Results() {
-        details_Response();
+    void set_Results() { //for setting score for display & details
+
+        details_Response(); // get the responses of details
+        //for setting the details
         TextView Final_TV = findViewById(R.id.tv_8_final_results);
         Final_TV.setText(getString(R.string.Text_Name));
         Final_TV.append(name + "\n" + getString(R.string.Text_Age) + age);
         Final_TV.append("\n" + getString(R.string.Text_Gender) + gender);
-        Final_TV.append("\n" + getString(R.string.Score_is) + " " + score + " /5");
+        Final_TV.append("\n" + getString(R.string.Score_is));
 
-
-
+        TextView Final_Score = findViewById(R.id.tv_9_final_Score); //for setting the score
+        Final_Score.setText(String.valueOf(score));
+        Final_Score.append("/5");
+        Final_Score.setTextColor(getResources().getColor(R.color.black));
     }
 
-    public void On_Submit(View view) {
-        try {
+    public void On_Submit(View view) { // user will click on submit button and this method will be called
+        try {  //to handle exceptions
             Boolean flag = true;
             if (check_Details(flag)) {
-
                 check_for_rad();
                 check_for_cb();
                 set_Results();
-
             }
-
         } catch (Exception ex) {
             Log.e("MainActivity", "exception", ex);
         }
