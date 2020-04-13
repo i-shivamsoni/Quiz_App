@@ -35,106 +35,6 @@
                 android:textSize="50sp"
                 tools:targetApi="jelly_bean" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:text="@string/Text_User_Details"
-                android:textSize="20sp"
-                tools:targetApi="jelly_bean" />
-
-            <LinearLayout
-                style="@style/questions"
-                android:layout_width="match_parent"
-
-                android:orientation="vertical">
-
-                <LinearLayout
-                    style="@style/WM_HW"
-                    android:layout_marginTop="10dp">
-
-                    <TextView
-                        style="@style/WW_HW"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:text="@string/Text_Name"
-                        android:textSize="20sp" />
-
-                    <EditText
-                        android:id="@+id/ET_name"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="16dp"
-                        android:layout_marginRight="16dp"
-                        android:autofillHints="@string/Text_Name"
-                        android:hint="@string/hint_name"
-                        android:inputType="text" />
-                </LinearLayout>
-
-                <LinearLayout
-                    style="@style/WW_HW"
-                    android:layout_marginTop="10dp">
-
-                    <TextView
-                        style="@style/WW_HW"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:text="@string/Text_Gender"
-                        android:textSize="20sp" />
-
-                    <RadioGroup
-                        android:id="@+id/radio_gender"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <RadioButton
-                            android:id="@+id/radio_gender_1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginLeft="16dp"
-                            android:text="@string/Rd_Male"
-                            android:textSize="20sp" />
-
-                        <RadioButton
-                            android:id="@+id/radio_gender_2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="40dp"
-                            android:layout_marginLeft="40dp"
-                            android:text="@string/Rd_Female"
-                            android:textSize="20sp" />
-                    </RadioGroup>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:text="@string/Text_Age"
-                        android:textSize="20sp" />
-
-                    <EditText
-                        android:id="@+id/ET_age"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="30dp"
-                        android:layout_marginRight="30dp"
-                        android:autofillHints="@string/hint_age"
-                        android:hint="@string/hint_age"
-                        android:inputType="number" />
-                </LinearLayout>
-
-            </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -481,21 +381,7 @@
                 android:onClick="On_Submit"
                 android:text="@string/btn_submit" />
 
-            <TextView
-                android:id="@+id/tv_8_final_results"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:textSize="20sp"
-                android:visibility="visible" />
 
-            <TextView
-                android:id="@+id/tv_9_final_Score"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:textSize="40sp"
-                android:visibility="visible" />
         </LinearLayout>
 
     </ScrollView>

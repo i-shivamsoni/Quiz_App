@@ -1,21 +1,17 @@
 package com.example.quiz_app;
 
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
-import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-    String name, age, gender;
-    int score = 0;
+    // int score = 0;
     RadioGroup radioGroup;
     String[] Answers = new String[7];
 
@@ -38,10 +34,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    void check_for_rad() {  //for getting scores of questions with radio button
+    int check_for_rad() {  //for getting scores of questions with radio button
         int rg_id_1 = R.id.rg_no_1;
         int rg_id_2 = R.id.rg_no_2;
         int rg_id_3 = R.id.rg_no_3;
+
+        int score = 0;
 
         RadioButton rb_q1 = findViewById(R.id.rdb_q1_1);
         RadioButton rb_q2 = findViewById(R.id.rdb_q2_3);
@@ -75,16 +73,17 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-
+        return score;
     }
 
 
-    void check_for_cb() {  //for getting scores of questions with checkboxes
+    int check_for_cb() {  //for getting scores of questions with checkboxes
         //correct answers for q 4 are 1 & 2
         CheckBox Op_4q_1 = findViewById(R.id.cb_q4_1);
         CheckBox Op_4q_2 = findViewById(R.id.cb_q4_2);
         CheckBox Op_4q_3 = findViewById(R.id.cb_q4_3);
         CheckBox Op_4q_4 = findViewById(R.id.cb_q4_4);
+        int score = 0;
         boolean flag = false;
         if (Op_4q_1.isChecked() || Op_4q_2.isChecked() || Op_4q_3.isChecked() || Op_4q_4.isChecked()) {
             flag = true;
@@ -125,69 +124,19 @@ public class MainActivity extends AppCompatActivity {
                 Op_5q_4.setBackgroundColor(getResources().getColor(R.color.white));
             }
         }
+        return score;
     }
 
-    void details_Response() { //get the responses from text view and set it in strings
-        EditText ET_name = findViewById(R.id.ET_name);
-        EditText ET_age = findViewById(R.id.ET_age);
-        radioGroup = findViewById(R.id.radio_gender);
-        int selectedId = radioGroup.getCheckedRadioButtonId();
-        RadioButton radio_selected = findViewById(selectedId);
-
-        name = ET_name.getText().toString();
-        age = ET_age.getText().toString();
-        gender = radio_selected.getText().toString();
+    void get_grades() {
+        int score = check_for_cb() + check_for_rad();
+        Toast msg = Toast.makeText(getApplicationContext(), getString(R.string.scoremsg) + "" + score, Toast.LENGTH_LONG);
+        msg.show();
     }
-
-    Boolean check_Details(Boolean flag) { //for validations on details
-
-        EditText ET_name = findViewById(R.id.ET_name);
-        EditText ET_age = findViewById(R.id.ET_age);
-        radioGroup = findViewById(R.id.radio_gender);
-        int selectedId = radioGroup.getCheckedRadioButtonId();
-        String name = ET_name.getText().toString();
-        String age = ET_age.getText().toString();
-
-        if ((TextUtils.isEmpty(age)) || ((selectedId == -1)) || (TextUtils.isEmpty(name))) { //validation for empty fields
-            Log.w("V", "no name ");
-            Toast msg = Toast.makeText(getApplicationContext(), getString(R.string.Please_fill), Toast.LENGTH_LONG);
-            msg.show();
-            flag = false;
-        }
-
-        if (Integer.parseInt(age) == 0) { // validation for age
-            Toast msg = Toast.makeText(getApplicationContext(), getString(R.string.ageerror), Toast.LENGTH_LONG);
-            msg.show();
-            flag = false;
-        }
-
-        return flag;
-    }
-
-    void set_Results() { //for setting score for display & details
-
-        details_Response(); // get the responses of details
-        //for setting the details
-        TextView Final_TV = findViewById(R.id.tv_8_final_results);
-        Final_TV.setText(getString(R.string.Text_Name));
-        Final_TV.append(name + "\n" + getString(R.string.Text_Age) + age);
-        Final_TV.append("\n" + getString(R.string.Text_Gender) + gender);
-        Final_TV.append("\n" + getString(R.string.Score_is));
-
-        TextView Final_Score = findViewById(R.id.tv_9_final_Score); //for setting the score
-        Final_Score.setText(String.valueOf(score));
-        Final_Score.append("/5");
-        Final_Score.setTextColor(getResources().getColor(R.color.black));
-    }
-
     public void On_Submit(View view) { // user will click on submit button and this method will be called
         try {  //to handle exceptions
-            Boolean flag = true;
-            if (check_Details(flag)) {
-                check_for_rad();
-                check_for_cb();
-                set_Results();
-            }
+            check_for_rad();
+            check_for_cb();
+            get_grades();
         } catch (Exception ex) {
             Log.e("MainActivity", "exception", ex);
         }
