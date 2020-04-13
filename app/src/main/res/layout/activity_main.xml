@@ -464,7 +464,9 @@
                         <CheckBox
                             android:id="@+id/cb_q5_4"
                             style="@style/answers"
-                            android:text="@string/q5_op4" />
+                            android:text="@string/q5_op4"
+
+                            />
                     </LinearLayout>
 
 
@@ -486,6 +488,7 @@
                 android:gravity="center_horizontal"
                 android:textSize="20sp"
                 android:visibility="visible" />
+
 
         </LinearLayout>
 

@@ -62,4 +62,8 @@
     <string name="Rd_Female">Female</string>
     <string name="Decline">Decline to state</string>
     <string name="NoSelection">Nothing Selected</string>
+    <string name="Score_is">The Score is : </string>
+    <string name="ageerror">Age can not be 0 </string>
+
+    <string name="Please_fill">Please fill all the details </string>
 </resources>
