@@ -1,9 +1,11 @@
 package com.example.quiz_app;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -33,6 +35,23 @@ public class MainActivity extends AppCompatActivity {
         Answers[6] = getString(R.string.q5_op4);
     }
 
+    int check_for_edt() {
+        int score = 0;
+        String response;
+        EditText text = findViewById(R.id.ansq01);
+        response = text.getText().toString();
+
+        if (!(TextUtils.isEmpty(response))) {
+            String answer = getString(R.string.qnoans);
+            boolean bool = response.equalsIgnoreCase(answer);
+            if (bool) {
+                score++;
+                text.setBackgroundColor(getResources().getColor(R.color.white));
+            }
+
+        }
+        return score;
+    }
 
     int check_for_rad() {  //for getting scores of questions with radio button
         int rg_id_1 = R.id.rg_no_1;
@@ -128,10 +147,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void get_grades() {
-        int score = check_for_cb() + check_for_rad();
-        Toast msg = Toast.makeText(getApplicationContext(), getString(R.string.scoremsg) + "" + score, Toast.LENGTH_LONG);
+        int score = check_for_edt() + check_for_cb() + check_for_rad();
+        Toast msg = Toast.makeText(getApplicationContext(), getString(R.string.scoremsg) + " " + score, Toast.LENGTH_LONG);
         msg.show();
     }
+
     public void On_Submit(View view) { // user will click on submit button and this method will be called
         try {  //to handle exceptions
             check_for_rad();

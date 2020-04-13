@@ -10,7 +10,10 @@
     <string name="app_name">G.K QUIZ</string>
     <string name="Heading">GK Quiz</string>
 
-
+    <string name="qn0">Q0.</string>
+    <string name="ans">Ans</string>
+    <string name="ansh">Colour of dark</string>
+    <string name="qnoans">black</string>
     <string name="qn1">Q1.</string>
     <string name="q1">What is the world\'s most common religion?</string>
     <string name="q1_op1">Hinduism</string>
@@ -66,4 +69,6 @@
     <string name="ageerror">Age can not be 0 </string>
     <string name="scoremsg">Your total score is </string>
     <string name="Please_fill">Please fill all the details </string>
+    <string name="question">What is colour of your hairs ??</string>
+
 </resources>
