@@ -27,17 +27,17 @@
 
     <string name="qn3">Q3.</string>
     <string name="q3">Who is the first person to reach Mount Everest?</string>
-    <string name="q3_op1"> Edmund Hillary</string>
-    <string name="q3_op2">Charles Hillary</string>
+    <string name="q3_op1">Charles Hillary</string>
     <string name="q3_op3">Rajesh Sharma</string>
+    <string name="q3_op2"> Edmund Hillary</string>
     <string name="q3_op4">Johan don</string>
 
 
     <string name="qn5">Q5.</string>
     <string name="q5"> Which country is not a permanent member of U.N permanent counsil?</string>
-    <string name="q5_op1">PRC</string>
-    <string name="q5_op2">India</string>
-    <string name="q5_op3">USA</string>
+    <string name="q5_op1">India</string>
+    <string name="q5_op2">USA</string>
+    <string name="q5_op3">PRC</string>
     <string name="q5_op4">Italy</string>
 
     <string name="qn4">Q4.</string>

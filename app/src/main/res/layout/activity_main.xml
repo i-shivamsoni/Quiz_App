@@ -172,7 +172,9 @@
 
                 <LinearLayout style="@style/WM_HW">
 
-                    <RadioGroup style="@style/WM_HW">
+                    <RadioGroup
+                        android:id="@+id/rg_no_1"
+                        style="@style/WM_HW">
                         <RadioButton
                             android:id="@+id/rdb_q1_1"
                             style="@style/answers"
@@ -223,7 +225,9 @@
 
                 <LinearLayout style="@style/WM_HW">
 
-                    <RadioGroup style="@style/WM_HW">
+                    <RadioGroup
+                        android:id="@+id/rg_no_2"
+                        style="@style/WM_HW">
 
 
                         <RadioButton
@@ -280,7 +284,9 @@
 
                 <LinearLayout style="@style/WM_HW">
 
-                    <RadioGroup style="@style/WM_HW">
+                    <RadioGroup
+                        android:id="@+id/rg_no_3"
+                        style="@style/WM_HW">
 
                         <!--                    <LinearLayout-->
                         <!--                        style="@style/WM_HW"-->
@@ -470,7 +476,7 @@
                 style="@style/WW_HW"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
-                android:onClick="On_submit"
+                android:onClick="On_Submit"
                 android:text="@string/btn_submit" />
 
             <TextView
