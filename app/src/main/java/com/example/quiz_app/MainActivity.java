@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
             boolean bool = response.equalsIgnoreCase(answer);
             if (bool) {
                 score++;
-                text.setBackgroundColor(getResources().getColor(R.color.white));
+                //    text.setBackgroundColor(getResources().getColor(R.color.white));
             }
 
         }
@@ -60,16 +60,18 @@ public class MainActivity extends AppCompatActivity {
 
         int score = 0;
 
-        RadioButton rb_q1 = findViewById(R.id.rdb_q1_1);
-        RadioButton rb_q2 = findViewById(R.id.rdb_q2_3);
-        RadioButton rb_q3 = findViewById(R.id.rdb_q3_2);
+//        RadioButton rb_q1 = findViewById(R.id.rdb_q1_1);
+//        RadioButton rb_q2 = findViewById(R.id.rdb_q2_3);
+//        RadioButton rb_q3 = findViewById(R.id.rdb_q3_2);
+
+
         radioGroup = findViewById(rg_id_1);
         int selectedId_1 = radioGroup.getCheckedRadioButtonId();
         if (selectedId_1 != -1) {
             RadioButton reponse_1 = findViewById(selectedId_1);
             if (reponse_1.getText().toString().equalsIgnoreCase(Answers[0])) {
                 score++;
-                rb_q1.setBackgroundColor(getResources().getColor(R.color.white));
+                //  rb_q1.setBackgroundColor(getResources().getColor(R.color.white));
             }
         }
         radioGroup = findViewById(rg_id_2);
@@ -78,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
             RadioButton reponse_2 = findViewById(selectedId_2);
             if (reponse_2.getText().toString().equalsIgnoreCase(Answers[1])) {
                 score++;
-                rb_q2.setBackgroundColor(getResources().getColor(R.color.white));
+                //rb_q2.setBackgroundColor(getResources().getColor(R.color.white));
             }
         }
 
@@ -88,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
             RadioButton reponse_3 = findViewById(selectedId_3);
             if (reponse_3.getText().toString().equalsIgnoreCase(Answers[2])) {
                 score++;
-                rb_q3.setBackgroundColor(getResources().getColor(R.color.white));
+                // rb_q3.setBackgroundColor(getResources().getColor(R.color.white));
             }
         }
 
@@ -113,12 +115,12 @@ public class MainActivity extends AppCompatActivity {
 
             if (Op_4q_3.isChecked() || Op_4q_4.isChecked()) {
                 //condition for false answer
-                Log.w("V", "4 incorrect answer ");
+                //  Log.w("V", "4 incorrect answer ");
             } else {
-                Log.w("V", "4 correct answer ");
+                //  Log.w("V", "4 correct answer ");
                 score++;
-                Op_4q_1.setBackgroundColor(getResources().getColor(R.color.white));
-                Op_4q_2.setBackgroundColor(getResources().getColor(R.color.white));
+                //Op_4q_1.setBackgroundColor(getResources().getColor(R.color.white));
+                //Op_4q_2.setBackgroundColor(getResources().getColor(R.color.white));
             }
         }
 
@@ -135,12 +137,12 @@ public class MainActivity extends AppCompatActivity {
         if (flag1) {
             if (Op_5q_2.isChecked() || Op_5q_3.isChecked()) {
                 //condition for false answer
-                Log.w("V", "5 incorrect answer ");
+                //Log.w("V", "5 incorrect answer ");
             } else {
-                Log.w("V", "5 correct answer ");
+                // Log.w("V", "5 correct answer ");
                 score++;
-                Op_5q_1.setBackgroundColor(getResources().getColor(R.color.white));
-                Op_5q_4.setBackgroundColor(getResources().getColor(R.color.white));
+                // Op_5q_1.setBackgroundColor(getResources().getColor(R.color.white));
+                // Op_5q_4.setBackgroundColor(getResources().getColor(R.color.white));
             }
         }
         return score;
